@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>指数多空信号仪表盘</title>
+<style>
+  :root {
+    --bg: #0f172a; --card: #1e293b; --border: #334155;
+    --text: #f1f5f9; --muted: #94a3b8; --green: #22c55e;
+    --red: #ef4444; --blue: #3b82f6; --yellow: #eab308;
+    --purple: #a855f7; --teal: #14b8a6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, 'PingFang SC', sans-serif; min-height: 100vh; }
+  .header { padding: 24px 20px 0; text-align: center; }
+  .header h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+  .header .updated { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .vix-bar { margin: 16px 20px 0; background: var(--card); border-radius: 10px; padding: 12px 16px; border: 1px solid var(--border); display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .vix-bar .label { font-size: 12px; color: var(--muted); }
+  .vix-val { font-size: 20px; font-weight: 700; }
+  .vix-desc { font-size: 12px; padding: 3px 8px; border-radius: 99px; }
+  .tabs { display: flex; gap: 8px; padding: 16px 20px 0; overflow-x: auto; }
+  .tab { padding: 7px 16px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; font-size: 13px; white-space: nowrap; transition: all .2s; }
+  .tab.active { background: var(--blue); border-color: var(--blue); color: #fff; font-weight: 600; }
+  .content { padding: 16px 20px 40px; }
+  .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .signal-card { background: var(--card); border-radius: 12px; border: 2px solid var(--border); padding: 18px; transition: border-color .3s; }
+  .signal-card.long  { border-color: var(--green); }
+  .signal-card.cash  { border-color: var(--border); }
+  .sig-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+  .sig-name { font-size: 13px; color: var(--muted); }
+  .sig-sym  { font-size: 18px; font-weight: 700; }
+  .sig-badge { padding: 5px 12px; border-radius: 99px; font-size: 13px; font-weight: 700; }
+  .sig-badge.long { background: rgba(34,197,94,.15); color: var(--green); }
+  .sig-badge.cash { background: rgba(148,163,184,.1); color: var(--muted); }
+  .sig-price { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .sig-mas   { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .conditions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .cond { display: flex; align-items: center; gap: 5px; font-size: 12px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .dot.ok  { background: var(--green); }
+  .dot.bad { background: var(--red); }
+  .mode-toggle { display: flex; gap: 8px; margin-bottom: 14px; }
+  .mode-btn { padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; font-size: 12px; }
+  .mode-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .section-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 20px; }
+  .sum-card { background: var(--card); border-radius: 10px; padding: 14px; border: 1px solid var(--border); }
+  .sum-card .label { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+  .sum-card .val   { font-size: 20px; font-weight: 700; }
+  .table-wrap { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { padding: 10px 14px; text-align: right; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--border); font-size: 12px; }
+  th:first-child { text-align: left; }
+  td { padding: 9px 14px; text-align: right; border-bottom: 1px solid rgba(51,65,85,.5); }
+  td:first-child { text-align: left; font-weight: 500; }
+  tr:last-child td { border-bottom: none; }
+  tr.highlight-pos td { background: rgba(34,197,94,.05); }
+  tr.highlight-neg td { background: rgba(239,68,68,.05); }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .neu { color: var(--muted); }
+  .cum-alpha-row { font-weight: 700; background: rgba(59,130,246,.08) !important; }
+  .loading { text-align: center; padding: 60px; color: var(--muted); font-size: 15px; }
+  @media (max-width: 600px) {
+    .signal-grid { grid-template-columns: 1fr; }
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    th, td { padding: 8px 10px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 指数多空信号仪表盘</h1>
+  <div class="updated" id="updated">加载中...</div>
+</div>
+
+<div class="vix-bar" id="vixBar" style="display:none">
+  <div><div class="label">恐慌指数</div><div class="vix-val" id="vixVal">—</div></div>
+  <div class="vix-desc" id="vixDesc"></div>
+  <div style="flex:1"></div>
+  <div style="font-size:12px;color:var(--muted)">信号模式：</div>
+  <div class="mode-toggle" style="margin:0">
+    <button class="mode-btn active" id="modeFast" onclick="setMode('fast')">快速 MA20</button>
+    <button class="mode-btn"        id="modeSlow" onclick="setMode('slow')">稳健 MA50</button>
+  </div>
+</div>
+
+<div class="tabs" id="tabs">
+  <button class="tab active" onclick="setTab('signals')">📡 当日信号</button>
+  <button class="tab" onclick="setTab('SPY')">SPY 标普500</button>
+  <button class="tab" onclick="setTab('QQQ')">QQQ 纳指</button>
+  <button class="tab" onclick="setTab('DIA')">DIA 道指</button>
+</div>
+
+<div class="content">
+  <div id="loading" class="loading">⏳ 加载数据中...</div>
+  <div id="app" style="display:none"></div>
+</div>
+
+<script>
+let DATA = null, MODE = 'fast', TAB = 'signals';
+
+async function loadData() {
+  try {
+    const r = await fetch('signals.json?t=' + Date.now());
+    DATA = await r.json();
+    init();
+  } catch(e) {
+    document.getElementById('loading').innerHTML = '❌ 无法加载 signals.json，请确认文件已生成';
+  }
+}
+
+function init() {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('vixBar').style.display = 'flex';
+  const anyIdx = Object.values(DATA.indices)[0];
+  const vix = anyIdx.vix;
+  document.getElementById('updated').textContent = '更新时间: ' + DATA.updated_at;
+  document.getElementById('vixVal').textContent = vix.toFixed(1);
+  const vixEl = document.getElementById('vixDesc');
+  if (vix < 15) { vixEl.textContent='😌 低波动 贪婪'; vixEl.style.background='rgba(34,197,94,.15)'; vixEl.style.color='#22c55e'; }
+  else if (vix < 25) { vixEl.textContent='😐 正常区间'; vixEl.style.background='rgba(234,179,8,.15)'; vixEl.style.color='#eab308'; }
+  else if (vix < 35) { vixEl.textContent='😰 恐慌升温'; vixEl.style.background='rgba(249,115,22,.15)'; vixEl.style.color='#f97316'; }
+  else { vixEl.textContent='🔴 极端恐慌'; vixEl.style.background='rgba(239,68,68,.15)'; vixEl.style.color='#ef4444'; }
+  render();
+}
+
+function setMode(m) {
+  MODE = m;
+  document.getElementById('modeFast').className = 'mode-btn' + (m==='fast' ? ' active' : '');
+  document.getElementById('modeSlow').className = 'mode-btn' + (m==='slow' ? ' active' : '');
+  render();
+}
+
+function setTab(t) {
+  TAB = t;
+  document.querySelectorAll('.tab').forEach((el,i) => {
+    el.className = 'tab' + (['signals','SPY','QQQ','DIA'][i]===t ? ' active' : '');
+  });
+  render();
+}
+
+function pct(v) {
+  const cls = v > 0 ? 'pos' : v < 0 ? 'neg' : 'neu';
+  return `<span class="${cls}">${v > 0 ? '+' : ''}${v.toFixed(1)}%</span>`;
+}
+
+function renderSignals() {
+  const syms = ['SPY','QQQ','DIA'];
+  const modeKey = 'signal_' + MODE;
+  let html = '<div class="signal-grid">';
+  for (const sym of syms) {
+    const d = DATA.indices[sym];
+    const pos = d[modeKey];
+    const c = d.conditions;
+    const maKey = MODE === 'fast' ? 'ma20' : 'ma50';
+    const aboveKey = MODE === 'fast' ? 'above_ma20' : 'above_ma50';
+    html += `
+    <div class="signal-card ${pos ? 'long' : 'cash'}">
+      <div class="sig-header">
+        <div><div class="sig-name">${d.name}</div><div class="sig-sym">${sym}</div></div>
+        <div class="sig-badge ${pos ? 'long' : 'cash'}">${pos ? '📈 满仓做多' : '💵 空仓现金'}</div>
+      </div>
+      <div class="sig-price">$${d.price.toLocaleString()}</div>
+      <div class="sig-mas">MA${MODE==='fast'?20:50}: $${d[maKey].toLocaleString()} &nbsp;|&nbsp; 5日: ${d.ret_5d > 0 ? '+' : ''}${d.ret_5d}% &nbsp;|&nbsp; 21日: ${d.ret_21d > 0 ? '+' : ''}${d.ret_21d}%</div>
+      <div class="conditions">
+        <div class="cond"><div class="dot ${c[aboveKey]?'ok':'bad'}"></div>价格>${MODE==='fast'?'MA20':'MA50'}</div>
+        <div class="cond"><div class="dot ${c.mom5_pos?'ok':'bad'}"></div>5日动量正</div>
+        <div class="cond"><div class="dot ${c.mom21_pos?'ok':'bad'}"></div>21日动量正</div>
+        <div class="cond"><div class="dot ${c.vix_cooling?'ok':'bad'}"></div>VIX从高位回落</div>
+      </div>
+    </div>`;
+  }
+  html += '</div>';
+  return html;
+}
+
+function renderBacktest(sym) {
+  const d = DATA.indices[sym];
+  const bt = d['backtest_' + MODE];
+  const annual = bt.annual;
+  const totalAlpha = bt.cum_alpha;
+
+  let html = `
+  <div class="section-title">${d.name} — ${MODE==='fast'?'快速 MA20':'稳健 MA50'} 回测报告</div>
+  <div class="summary-grid">
+    <div class="sum-card"><div class="label">策略 CAGR</div><div class="val ${bt.cagr>0?'pos':'neg'}">${bt.cagr>0?'+':''}${bt.cagr}%</div></div>
+    <div class="sum-card"><div class="label">基准 CAGR</div><div class="val">${bt.bench_cagr>0?'+':''}${bt.bench_cagr}%</div></div>
+    <div class="sum-card"><div class="label">Sharpe</div><div class="val">${bt.sharpe}</div></div>
+    <div class="sum-card"><div class="label">策略最大回撤</div><div class="val neg">${bt.mdd}%</div></div>
+    <div class="sum-card"><div class="label">基准最大回撤</div><div class="val neg">${bt.bench_mdd}%</div></div>
+    <div class="sum-card"><div class="label">历史累计超额</div><div class="val ${totalAlpha>0?'pos':'neg'}">${totalAlpha>0?'+':''}${totalAlpha}%</div></div>
+    <div class="sum-card"><div class="label">持仓天数占比</div><div class="val">${bt.invested_pct}%</div></div>
+  </div>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>年份</th><th>策略收益</th><th>基准收益</th><th>超额</th></tr></thead>
+    <tbody>`;
+
+  let cumAlpha = 0;
+  for (const row of annual) {
+    const rowClass = row.alpha > 5 ? 'highlight-pos' : row.alpha < -10 ? 'highlight-neg' : '';
+    cumAlpha += row.alpha;
+    html += `<tr class="${rowClass}"><td>${row.year}</td><td>${pct(row.strategy)}</td><td>${pct(row.benchmark)}</td><td>${pct(row.alpha)}</td></tr>`;
+  }
+  html += `<tr class="cum-alpha-row"><td>历史累计超额</td><td colspan="2" style="color:var(--muted);text-align:center">—</td><td>${pct(totalAlpha)}</td></tr>`;
+  html += '</tbody></table></div>';
+  return html;
+}
+
+function render() {
+  if (!DATA) return;
+  const el = document.getElementById('app');
+  if (TAB === 'signals') {
+    el.innerHTML = renderSignals();
+  } else {
+    el.innerHTML = renderBacktest(TAB);
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>
