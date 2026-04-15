@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-04-14 23:11 UTC",
+  "updated_at": "2026-04-15 23:09 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-04-14",
-      "price": 694.46,
-      "ma20": 660.36,
-      "ma50": 672.95,
-      "vix": 18.4,
-      "ret_5d": 5.35,
-      "ret_21d": 5.14,
+      "date": "2026-04-15",
+      "price": 699.94,
+      "ma20": 661.91,
+      "ma50": 673.08,
+      "vix": 18.2,
+      "ret_5d": 3.54,
+      "ret_21d": 4.91,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
@@ -120,14 +120,14 @@
           },
           {
             "year": 2026,
-            "strategy": 1.4,
-            "benchmark": 2.1,
+            "strategy": 2.2,
+            "benchmark": 2.9,
             "alpha": -0.8
           }
         ],
         "cum_alpha": -54.1,
         "cagr": 8.5,
-        "bench_cagr": 13.8,
+        "bench_cagr": 13.9,
         "mdd": -13.1,
         "bench_mdd": -33.7,
         "sharpe": 0.97,
@@ -233,14 +233,14 @@
           },
           {
             "year": 2026,
-            "strategy": 1.9,
-            "benchmark": 2.1,
+            "strategy": 2.7,
+            "benchmark": 2.9,
             "alpha": -0.2
           }
         ],
         "cum_alpha": -64.2,
-        "cagr": 6.8,
-        "bench_cagr": 13.8,
+        "cagr": 6.9,
+        "bench_cagr": 13.9,
         "mdd": -20.5,
         "bench_mdd": -33.7,
         "sharpe": 0.74,
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-04-14",
-      "price": 628.6,
-      "ma20": 591.08,
-      "ma50": 600.02,
-      "vix": 18.4,
-      "ret_5d": 6.8,
-      "ret_21d": 6.01,
+      "date": "2026-04-15",
+      "price": 637.4,
+      "ma20": 592.83,
+      "ma50": 600.26,
+      "vix": 18.2,
+      "ret_5d": 5.17,
+      "ret_21d": 6.3,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
@@ -366,17 +366,17 @@
           },
           {
             "year": 2026,
-            "strategy": 3.7,
-            "benchmark": 2.5,
+            "strategy": 5.2,
+            "benchmark": 3.9,
             "alpha": 1.3
           }
         ],
         "cum_alpha": -79.5,
-        "cagr": 7.4,
-        "bench_cagr": 18.4,
+        "cagr": 7.5,
+        "bench_cagr": 18.5,
         "mdd": -29.6,
         "bench_mdd": -35.1,
-        "sharpe": 0.73,
+        "sharpe": 0.74,
         "invested_pct": 50.0
       },
       "backtest_slow": {
@@ -479,29 +479,29 @@
           },
           {
             "year": 2026,
-            "strategy": 0.3,
-            "benchmark": 2.5,
-            "alpha": -2.1
+            "strategy": 1.7,
+            "benchmark": 3.9,
+            "alpha": -2.2
           }
         ],
         "cum_alpha": -76.9,
-        "cagr": 8.2,
-        "bench_cagr": 18.4,
+        "cagr": 8.3,
+        "bench_cagr": 18.5,
         "mdd": -21.3,
         "bench_mdd": -35.1,
-        "sharpe": 0.73,
+        "sharpe": 0.74,
         "invested_pct": 59.7
       }
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-04-14",
-      "price": 485.49,
-      "ma20": 466.61,
-      "ma50": 479.05,
-      "vix": 18.4,
-      "ret_5d": 4.21,
-      "ret_21d": 4.32,
+      "date": "2026-04-15",
+      "price": 484.72,
+      "ma20": 467.35,
+      "ma50": 478.9,
+      "vix": 18.2,
+      "ret_5d": 1.16,
+      "ret_21d": 3.29,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
@@ -612,8 +612,8 @@
           },
           {
             "year": 2026,
-            "strategy": 0.3,
-            "benchmark": 1.4,
+            "strategy": 0.2,
+            "benchmark": 1.2,
             "alpha": -1.1
           }
         ],
@@ -725,8 +725,8 @@
           },
           {
             "year": 2026,
-            "strategy": 3.3,
-            "benchmark": 1.4,
+            "strategy": 3.1,
+            "benchmark": 1.2,
             "alpha": 1.9
           }
         ],
@@ -736,7 +736,7 @@
         "mdd": -18.5,
         "bench_mdd": -36.7,
         "sharpe": 0.57,
-        "invested_pct": 60.9
+        "invested_pct": 61.0
       }
     }
   }
