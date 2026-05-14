@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-05-13 23:36 UTC",
+  "updated_at": "2026-05-14 23:27 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-05-13",
-      "price": 742.31,
-      "ma20": 720.03,
-      "ma50": 687.18,
-      "vix": 17.9,
-      "ret_5d": 1.16,
+      "date": "2026-05-14",
+      "price": 748.17,
+      "ma20": 722.35,
+      "ma50": 688.48,
+      "vix": 17.3,
+      "ret_5d": 2.27,
       "ret_21d": 6.89,
       "signal_fast": 1,
       "signal_slow": 1,
@@ -120,14 +120,14 @@
           },
           {
             "year": 2026,
-            "strategy": 8.3,
-            "benchmark": 9.2,
+            "strategy": 9.2,
+            "benchmark": 10.0,
             "alpha": -0.8
           }
         ],
         "cum_alpha": -54.1,
         "cagr": 8.9,
-        "bench_cagr": 14.2,
+        "bench_cagr": 14.3,
         "mdd": -13.1,
         "bench_mdd": -33.7,
         "sharpe": 1.01,
@@ -233,14 +233,14 @@
           },
           {
             "year": 2026,
-            "strategy": 9.0,
-            "benchmark": 9.2,
+            "strategy": 9.8,
+            "benchmark": 10.0,
             "alpha": -0.2
           }
         ],
         "cum_alpha": -64.2,
-        "cagr": 7.2,
-        "bench_cagr": 14.2,
+        "cagr": 7.3,
+        "bench_cagr": 14.3,
         "mdd": -20.5,
         "bench_mdd": -33.7,
         "sharpe": 0.78,
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-05-13",
-      "price": 714.71,
-      "ma20": 673.39,
-      "ma50": 627.08,
-      "vix": 17.9,
-      "ret_5d": 2.72,
-      "ret_21d": 13.7,
+      "date": "2026-05-14",
+      "price": 719.79,
+      "ma20": 677.35,
+      "ma50": 629.28,
+      "vix": 17.3,
+      "ret_5d": 3.58,
+      "ret_21d": 12.93,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
@@ -366,13 +366,13 @@
           },
           {
             "year": 2026,
-            "strategy": 17.9,
-            "benchmark": 16.5,
+            "strategy": 18.8,
+            "benchmark": 17.3,
             "alpha": 1.4
           }
         ],
         "cum_alpha": -79.5,
-        "cagr": 8.2,
+        "cagr": 8.3,
         "bench_cagr": 19.3,
         "mdd": -29.6,
         "bench_mdd": -35.1,
@@ -479,13 +479,13 @@
           },
           {
             "year": 2026,
-            "strategy": 14.1,
-            "benchmark": 16.5,
+            "strategy": 14.9,
+            "benchmark": 17.3,
             "alpha": -2.4
           }
         ],
         "cum_alpha": -76.9,
-        "cagr": 9.0,
+        "cagr": 9.1,
         "bench_cagr": 19.3,
         "mdd": -21.3,
         "bench_mdd": -35.1,
@@ -495,19 +495,19 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-05-13",
-      "price": 497.14,
-      "ma20": 493.73,
-      "ma50": 479.07,
-      "vix": 17.9,
-      "ret_5d": -0.38,
-      "ret_21d": 2.44,
+      "date": "2026-05-14",
+      "price": 500.8,
+      "ma20": 494.5,
+      "ma50": 479.36,
+      "vix": 17.3,
+      "ret_5d": 0.99,
+      "ret_21d": 3.36,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
         "above_ma20": true,
         "above_ma50": true,
-        "mom5_pos": false,
+        "mom5_pos": true,
         "mom21_pos": true,
         "vix_cooling": false,
         "vix_spike": false
@@ -612,17 +612,17 @@
           },
           {
             "year": 2026,
-            "strategy": 2.8,
-            "benchmark": 3.9,
+            "strategy": 3.5,
+            "benchmark": 4.6,
             "alpha": -1.1
           }
         ],
         "cum_alpha": -62.1,
-        "cagr": 5.8,
-        "bench_cagr": 12.3,
+        "cagr": 5.9,
+        "bench_cagr": 12.4,
         "mdd": -14.8,
         "bench_mdd": -36.7,
-        "sharpe": 0.73,
+        "sharpe": 0.74,
         "invested_pct": 50.0
       },
       "backtest_slow": {
@@ -725,18 +725,18 @@
           },
           {
             "year": 2026,
-            "strategy": 5.8,
-            "benchmark": 3.9,
+            "strategy": 6.6,
+            "benchmark": 4.6,
             "alpha": 1.9
           }
         ],
         "cum_alpha": -66.5,
-        "cagr": 5.0,
-        "bench_cagr": 12.3,
+        "cagr": 5.1,
+        "bench_cagr": 12.4,
         "mdd": -18.5,
         "bench_mdd": -36.7,
         "sharpe": 0.58,
-        "invested_pct": 61.1
+        "invested_pct": 61.2
       }
     }
   }
