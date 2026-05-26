@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-05-25 23:38 UTC",
+  "updated_at": "2026-05-26 23:39 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-05-22",
-      "price": 745.64,
-      "ma20": 731.58,
-      "ma50": 696.49,
-      "vix": 16.7,
-      "ret_5d": 0.88,
-      "ret_21d": 5.25,
+      "date": "2026-05-26",
+      "price": 750.59,
+      "ma20": 733.36,
+      "ma50": 698.3,
+      "vix": 17.0,
+      "ret_5d": 1.62,
+      "ret_21d": 5.13,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
@@ -120,14 +120,14 @@
           },
           {
             "year": 2026,
-            "strategy": 8.8,
-            "benchmark": 9.6,
+            "strategy": 9.6,
+            "benchmark": 10.4,
             "alpha": -0.8
           }
         ],
         "cum_alpha": -54.1,
-        "cagr": 8.9,
-        "bench_cagr": 14.2,
+        "cagr": 9.0,
+        "bench_cagr": 14.3,
         "mdd": -13.1,
         "bench_mdd": -33.7,
         "sharpe": 1.01,
@@ -233,14 +233,14 @@
           },
           {
             "year": 2026,
-            "strategy": 9.5,
-            "benchmark": 9.6,
+            "strategy": 10.2,
+            "benchmark": 10.4,
             "alpha": -0.2
           }
         ],
         "cum_alpha": -64.2,
         "cagr": 7.3,
-        "bench_cagr": 14.2,
+        "bench_cagr": 14.3,
         "mdd": -20.5,
         "bench_mdd": -33.7,
         "sharpe": 0.78,
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-05-22",
-      "price": 717.54,
-      "ma20": 694.91,
-      "ma50": 642.01,
-      "vix": 16.7,
-      "ret_5d": 1.21,
-      "ret_21d": 10.15,
+      "date": "2026-05-26",
+      "price": 730.28,
+      "ma20": 698.21,
+      "ma50": 644.76,
+      "vix": 17.0,
+      "ret_5d": 3.46,
+      "ret_21d": 10.0,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
@@ -366,17 +366,17 @@
           },
           {
             "year": 2026,
-            "strategy": 18.4,
-            "benchmark": 17.0,
-            "alpha": 1.4
+            "strategy": 20.5,
+            "benchmark": 19.0,
+            "alpha": 1.5
           }
         ],
         "cum_alpha": -79.5,
-        "cagr": 8.2,
-        "bench_cagr": 19.3,
+        "cagr": 8.4,
+        "bench_cagr": 19.4,
         "mdd": -29.6,
         "bench_mdd": -35.1,
-        "sharpe": 0.8,
+        "sharpe": 0.81,
         "invested_pct": 50.3
       },
       "backtest_slow": {
@@ -479,14 +479,14 @@
           },
           {
             "year": 2026,
-            "strategy": 14.5,
-            "benchmark": 17.0,
-            "alpha": -2.4
+            "strategy": 16.6,
+            "benchmark": 19.0,
+            "alpha": -2.5
           }
         ],
         "cum_alpha": -76.9,
-        "cagr": 9.0,
-        "bench_cagr": 19.3,
+        "cagr": 9.2,
+        "bench_cagr": 19.4,
         "mdd": -21.3,
         "bench_mdd": -35.1,
         "sharpe": 0.8,
@@ -495,13 +495,13 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-05-22",
-      "price": 506.12,
-      "ma20": 496.11,
-      "ma50": 482.13,
-      "vix": 16.7,
-      "ret_5d": 2.17,
-      "ret_21d": 2.72,
+      "date": "2026-05-26",
+      "price": 505.25,
+      "ma20": 496.79,
+      "ma50": 482.94,
+      "vix": 17.0,
+      "ret_5d": 1.66,
+      "ret_21d": 2.71,
       "signal_fast": 0,
       "signal_slow": 1,
       "conditions": {
@@ -613,11 +613,11 @@
           {
             "year": 2026,
             "strategy": 3.5,
-            "benchmark": 5.8,
-            "alpha": -2.4
+            "benchmark": 5.6,
+            "alpha": -2.2
           }
         ],
-        "cum_alpha": -62.6,
+        "cum_alpha": -62.5,
         "cagr": 5.9,
         "bench_cagr": 12.4,
         "mdd": -14.8,
@@ -725,8 +725,8 @@
           },
           {
             "year": 2026,
-            "strategy": 7.8,
-            "benchmark": 5.8,
+            "strategy": 7.6,
+            "benchmark": 5.6,
             "alpha": 1.9
           }
         ],
