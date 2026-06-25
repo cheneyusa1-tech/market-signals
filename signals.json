@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-06-24 23:41 UTC",
+  "updated_at": "2026-06-25 23:51 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-06-24",
-      "price": 733.24,
-      "ma20": 744.15,
-      "ma50": 731.24,
-      "vix": 18.6,
-      "ret_5d": -2.03,
-      "ret_21d": -1.41,
+      "date": "2026-06-25",
+      "price": 734.3,
+      "ma20": 743.44,
+      "ma50": 732.07,
+      "vix": 18.9,
+      "ret_5d": -0.64,
+      "ret_21d": -1.92,
       "signal_fast": 0,
       "signal_slow": 1,
       "conditions": {
@@ -17,7 +17,7 @@
         "above_ma50": true,
         "mom5_pos": false,
         "mom21_pos": false,
-        "vix_cooling": true,
+        "vix_cooling": false,
         "vix_spike": false
       },
       "backtest_fast": {
@@ -121,11 +121,11 @@
           {
             "year": 2026,
             "strategy": 7.0,
-            "benchmark": 8.1,
-            "alpha": -1.1
+            "benchmark": 8.3,
+            "alpha": -1.2
           }
         ],
-        "cum_alpha": -54.2,
+        "cum_alpha": -54.3,
         "cagr": 8.8,
         "bench_cagr": 14.0,
         "mdd": -13.1,
@@ -233,8 +233,8 @@
           },
           {
             "year": 2026,
-            "strategy": 7.9,
-            "benchmark": 8.1,
+            "strategy": 8.1,
+            "benchmark": 8.3,
             "alpha": -0.2
           }
         ],
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-06-24",
-      "price": 710.62,
-      "ma20": 726.19,
-      "ma50": 698.93,
-      "vix": 18.6,
-      "ret_5d": -2.53,
-      "ret_21d": -0.86,
+      "date": "2026-06-25",
+      "price": 716.38,
+      "ma20": 725.58,
+      "ma50": 700.7,
+      "vix": 18.9,
+      "ret_5d": -0.74,
+      "ret_21d": -1.8,
       "signal_fast": 0,
       "signal_slow": 1,
       "conditions": {
@@ -263,7 +263,7 @@
         "above_ma50": true,
         "mom5_pos": false,
         "mom21_pos": false,
-        "vix_cooling": true,
+        "vix_cooling": false,
         "vix_spike": false
       },
       "backtest_fast": {
@@ -367,11 +367,11 @@
           {
             "year": 2026,
             "strategy": 17.6,
-            "benchmark": 16.0,
-            "alpha": 1.7
+            "benchmark": 16.9,
+            "alpha": 0.7
           }
         ],
-        "cum_alpha": -79.4,
+        "cum_alpha": -79.6,
         "cagr": 8.2,
         "bench_cagr": 19.1,
         "mdd": -29.6,
@@ -479,13 +479,13 @@
           },
           {
             "year": 2026,
-            "strategy": 13.5,
-            "benchmark": 16.0,
+            "strategy": 14.5,
+            "benchmark": 16.9,
             "alpha": -2.4
           }
         ],
         "cum_alpha": -76.9,
-        "cagr": 8.9,
+        "cagr": 9.0,
         "bench_cagr": 19.1,
         "mdd": -21.3,
         "bench_mdd": -35.1,
@@ -495,21 +495,21 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-06-24",
-      "price": 518.52,
-      "ma20": 511.38,
-      "ma50": 500.54,
-      "vix": 18.6,
-      "ret_5d": -0.29,
-      "ret_21d": 2.73,
+      "date": "2026-06-25",
+      "price": 519.26,
+      "ma20": 512.06,
+      "ma50": 501.26,
+      "vix": 18.9,
+      "ret_5d": 0.85,
+      "ret_21d": 3.05,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
         "above_ma20": true,
         "above_ma50": true,
-        "mom5_pos": false,
+        "mom5_pos": true,
         "mom21_pos": true,
-        "vix_cooling": true,
+        "vix_cooling": false,
         "vix_spike": false
       },
       "backtest_fast": {
@@ -612,8 +612,8 @@
           },
           {
             "year": 2026,
-            "strategy": 3.9,
-            "benchmark": 8.7,
+            "strategy": 4.1,
+            "benchmark": 8.9,
             "alpha": -4.8
           }
         ],
@@ -725,8 +725,8 @@
           },
           {
             "year": 2026,
-            "strategy": 10.7,
-            "benchmark": 8.7,
+            "strategy": 10.9,
+            "benchmark": 8.9,
             "alpha": 2.0
           }
         ],
