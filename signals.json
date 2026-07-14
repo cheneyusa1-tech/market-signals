@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-13 23:25 UTC",
+  "updated_at": "2026-07-14 23:23 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-07-13",
-      "price": 749.17,
-      "ma20": 744.0,
-      "ma50": 740.69,
-      "vix": 17.2,
-      "ret_5d": -0.28,
-      "ret_21d": 3.54,
+      "date": "2026-07-14",
+      "price": 751.83,
+      "ma20": 744.6,
+      "ma50": 741.39,
+      "vix": 16.5,
+      "ret_5d": 0.55,
+      "ret_21d": 2.17,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
         "above_ma20": true,
         "above_ma50": true,
-        "mom5_pos": false,
+        "mom5_pos": true,
         "mom21_pos": true,
         "vix_cooling": false,
         "vix_spike": false
@@ -120,18 +120,18 @@
           },
           {
             "year": 2026,
-            "strategy": 6.7,
-            "benchmark": 10.4,
+            "strategy": 7.0,
+            "benchmark": 10.8,
             "alpha": -3.8
           }
         ],
         "cum_alpha": -55.3,
         "cagr": 8.7,
-        "bench_cagr": 14.1,
+        "bench_cagr": 14.2,
         "mdd": -13.1,
         "bench_mdd": -33.7,
         "sharpe": 0.99,
-        "invested_pct": 56.3
+        "invested_pct": 56.4
       },
       "backtest_slow": {
         "annual": [
@@ -233,35 +233,35 @@
           },
           {
             "year": 2026,
-            "strategy": 8.7,
-            "benchmark": 10.4,
+            "strategy": 9.1,
+            "benchmark": 10.8,
             "alpha": -1.8
           }
         ],
         "cum_alpha": -64.7,
         "cagr": 7.2,
-        "bench_cagr": 14.1,
+        "bench_cagr": 14.2,
         "mdd": -20.5,
         "bench_mdd": -33.7,
-        "sharpe": 0.76,
+        "sharpe": 0.77,
         "invested_pct": 63.6
       }
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-07-13",
-      "price": 711.74,
-      "ma20": 722.1,
-      "ma50": 715.61,
-      "vix": 17.2,
-      "ret_5d": -1.53,
-      "ret_21d": 2.71,
-      "signal_fast": 1,
-      "signal_slow": 1,
+      "date": "2026-07-14",
+      "price": 719.69,
+      "ma20": 722.05,
+      "ma50": 716.66,
+      "vix": 16.5,
+      "ret_5d": 1.45,
+      "ret_21d": 0.47,
+      "signal_fast": 0,
+      "signal_slow": 0,
       "conditions": {
         "above_ma20": false,
-        "above_ma50": false,
-        "mom5_pos": false,
+        "above_ma50": true,
+        "mom5_pos": true,
         "mom21_pos": true,
         "vix_cooling": false,
         "vix_spike": false
@@ -366,18 +366,18 @@
           },
           {
             "year": 2026,
-            "strategy": 15.4,
-            "benchmark": 16.1,
+            "strategy": 16.7,
+            "benchmark": 17.4,
             "alpha": -0.8
           }
         ],
         "cum_alpha": -79.9,
-        "cagr": 8.0,
-        "bench_cagr": 19.0,
+        "cagr": 8.1,
+        "bench_cagr": 19.1,
         "mdd": -29.6,
         "bench_mdd": -35.1,
-        "sharpe": 0.77,
-        "invested_pct": 50.3
+        "sharpe": 0.78,
+        "invested_pct": 50.2
       },
       "backtest_slow": {
         "annual": [
@@ -479,14 +479,14 @@
           },
           {
             "year": 2026,
-            "strategy": 13.5,
-            "benchmark": 16.1,
-            "alpha": -2.6
+            "strategy": 14.8,
+            "benchmark": 17.4,
+            "alpha": -2.7
           }
         ],
         "cum_alpha": -76.9,
-        "cagr": 8.9,
-        "bench_cagr": 19.0,
+        "cagr": 9.0,
+        "bench_cagr": 19.1,
         "mdd": -21.3,
         "bench_mdd": -35.1,
         "sharpe": 0.78,
@@ -495,13 +495,13 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-07-13",
-      "price": 524.47,
-      "ma20": 520.92,
-      "ma50": 508.93,
-      "vix": 17.2,
-      "ret_5d": -1.06,
-      "ret_21d": 5.13,
+      "date": "2026-07-14",
+      "price": 524.69,
+      "ma20": 521.57,
+      "ma50": 509.52,
+      "vix": 16.5,
+      "ret_5d": -0.71,
+      "ret_21d": 3.29,
       "signal_fast": 1,
       "signal_slow": 1,
       "conditions": {
