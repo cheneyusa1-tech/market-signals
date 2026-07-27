@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-07-24 23:30 UTC",
+  "updated_at": "2026-07-27 23:33 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-07-24",
-      "price": 738.93,
-      "ma20": 746.15,
-      "ma50": 744.11,
-      "vix": 18.6,
-      "ret_5d": -0.59,
-      "ret_21d": 0.78,
+      "date": "2026-07-27",
+      "price": 739.09,
+      "ma20": 746.66,
+      "ma50": 744.08,
+      "vix": 18.7,
+      "ret_5d": -0.4,
+      "ret_21d": 0.65,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
@@ -121,7 +121,7 @@
           {
             "year": 2026,
             "strategy": 5.6,
-            "benchmark": 8.9,
+            "benchmark": 9.0,
             "alpha": -3.3
           }
         ],
@@ -234,7 +234,7 @@
           {
             "year": 2026,
             "strategy": 8.6,
-            "benchmark": 8.9,
+            "benchmark": 9.0,
             "alpha": -0.4
           }
         ],
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-07-24",
-      "price": 684.23,
-      "ma20": 711.71,
-      "ma50": 717.87,
-      "vix": 18.6,
-      "ret_5d": -1.6,
-      "ret_21d": -3.71,
+      "date": "2026-07-27",
+      "price": 682.12,
+      "ma20": 710.49,
+      "ma50": 717.24,
+      "vix": 18.7,
+      "ret_5d": -2.0,
+      "ret_21d": -4.78,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
@@ -367,8 +367,8 @@
           {
             "year": 2026,
             "strategy": 16.7,
-            "benchmark": 11.6,
-            "alpha": 5.0
+            "benchmark": 11.3,
+            "alpha": 5.4
           }
         ],
         "cum_alpha": -78.8,
@@ -480,11 +480,11 @@
           {
             "year": 2026,
             "strategy": 14.8,
-            "benchmark": 11.6,
-            "alpha": 3.1
+            "benchmark": 11.3,
+            "alpha": 3.5
           }
         ],
-        "cum_alpha": -75.7,
+        "cum_alpha": -75.6,
         "cagr": 9.0,
         "bench_cagr": 18.7,
         "mdd": -21.3,
@@ -495,19 +495,19 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-07-24",
-      "price": 518.76,
-      "ma20": 522.9,
-      "ma50": 513.73,
-      "vix": 18.6,
-      "ret_5d": -0.39,
-      "ret_21d": 0.07,
+      "date": "2026-07-27",
+      "price": 521.26,
+      "ma20": 523.08,
+      "ma50": 514.25,
+      "vix": 18.7,
+      "ret_5d": 0.64,
+      "ret_21d": 0.41,
       "signal_fast": 0,
       "signal_slow": 1,
       "conditions": {
         "above_ma20": false,
         "above_ma50": true,
-        "mom5_pos": false,
+        "mom5_pos": true,
         "mom21_pos": true,
         "vix_cooling": false,
         "vix_spike": false
@@ -613,11 +613,11 @@
           {
             "year": 2026,
             "strategy": 3.8,
-            "benchmark": 8.8,
-            "alpha": -5.0
+            "benchmark": 9.3,
+            "alpha": -5.5
           }
         ],
-        "cum_alpha": -63.5,
+        "cum_alpha": -63.6,
         "cagr": 5.8,
         "bench_cagr": 12.5,
         "mdd": -14.8,
@@ -725,8 +725,8 @@
           },
           {
             "year": 2026,
-            "strategy": 10.8,
-            "benchmark": 8.8,
+            "strategy": 11.3,
+            "benchmark": 9.3,
             "alpha": 2.0
           }
         ],
