@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-10-21 00:44 UTC",
+  "updated_at": "2026-10-22 00:47 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-10-19",
-      "price": 766.48,
-      "ma20": 770.83,
-      "ma50": 767.3,
-      "vix": 18.4,
-      "ret_5d": -1.49,
-      "ret_21d": 0.63,
+      "date": "2026-10-20",
+      "price": 769.05,
+      "ma20": 770.62,
+      "ma50": 767.26,
+      "vix": 17.3,
+      "ret_5d": -1.15,
+      "ret_21d": -0.58,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
         "above_ma20": false,
-        "above_ma50": false,
+        "above_ma50": true,
         "mom5_pos": false,
-        "mom21_pos": true,
+        "mom21_pos": false,
         "vix_cooling": false,
         "vix_spike": false
       },
@@ -121,11 +121,11 @@
           {
             "year": 2026,
             "strategy": 7.0,
-            "benchmark": 13.3,
-            "alpha": -6.3
+            "benchmark": 13.7,
+            "alpha": -6.7
           }
         ],
-        "cum_alpha": -56.3,
+        "cum_alpha": -56.4,
         "cagr": 8.6,
         "bench_cagr": 14.1,
         "mdd": -13.1,
@@ -234,11 +234,11 @@
           {
             "year": 2026,
             "strategy": 10.1,
-            "benchmark": 13.3,
-            "alpha": -3.2
+            "benchmark": 13.7,
+            "alpha": -3.6
           }
         ],
-        "cum_alpha": -65.2,
+        "cum_alpha": -65.3,
         "cagr": 7.1,
         "bench_cagr": 14.1,
         "mdd": -20.5,
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-10-19",
-      "price": 718.36,
-      "ma20": 741.36,
-      "ma50": 726.25,
-      "vix": 18.4,
-      "ret_5d": -3.71,
-      "ret_21d": -0.32,
+      "date": "2026-10-20",
+      "price": 717.63,
+      "ma20": 739.87,
+      "ma50": 726.2,
+      "vix": 17.3,
+      "ret_5d": -3.49,
+      "ret_21d": -3.22,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
@@ -367,8 +367,8 @@
           {
             "year": 2026,
             "strategy": 15.7,
-            "benchmark": 17.3,
-            "alpha": -1.6
+            "benchmark": 17.2,
+            "alpha": -1.5
           }
         ],
         "cum_alpha": -80.0,
@@ -480,8 +480,8 @@
           {
             "year": 2026,
             "strategy": 12.8,
-            "benchmark": 17.3,
-            "alpha": -4.6
+            "benchmark": 17.2,
+            "alpha": -4.5
           }
         ],
         "cum_alpha": -77.3,
@@ -495,18 +495,18 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-10-19",
-      "price": 518.92,
-      "ma20": 514.5,
-      "ma50": 522.91,
-      "vix": 18.4,
-      "ret_5d": 0.22,
-      "ret_21d": 0.61,
+      "date": "2026-10-20",
+      "price": 524.36,
+      "ma20": 514.82,
+      "ma50": 522.65,
+      "vix": 17.3,
+      "ret_5d": 1.6,
+      "ret_21d": 0.9,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
         "above_ma20": true,
-        "above_ma50": false,
+        "above_ma50": true,
         "mom5_pos": true,
         "mom21_pos": true,
         "vix_cooling": false,
@@ -613,13 +613,13 @@
           {
             "year": 2026,
             "strategy": 5.5,
-            "benchmark": 9.2,
-            "alpha": -3.7
+            "benchmark": 10.3,
+            "alpha": -4.9
           }
         ],
-        "cum_alpha": -63.0,
+        "cum_alpha": -63.4,
         "cagr": 5.8,
-        "bench_cagr": 12.3,
+        "bench_cagr": 12.4,
         "mdd": -14.8,
         "bench_mdd": -36.7,
         "sharpe": 0.73,
@@ -726,17 +726,17 @@
           {
             "year": 2026,
             "strategy": 12.0,
-            "benchmark": 9.2,
-            "alpha": 2.8
+            "benchmark": 10.3,
+            "alpha": 1.7
           }
         ],
-        "cum_alpha": -66.2,
+        "cum_alpha": -66.6,
         "cagr": 5.3,
-        "bench_cagr": 12.3,
+        "bench_cagr": 12.4,
         "mdd": -18.5,
         "bench_mdd": -36.7,
         "sharpe": 0.6,
-        "invested_pct": 61.5
+        "invested_pct": 61.4
       }
     }
   }
