@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-11-10 04:13 UTC",
+  "updated_at": "2026-11-11 02:03 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-11-09",
-      "price": 752.69,
-      "ma20": 762.09,
-      "ma50": 764.86,
-      "vix": 19.9,
-      "ret_5d": 0.08,
-      "ret_21d": -3.32,
+      "date": "2026-11-10",
+      "price": 749.92,
+      "ma20": 760.69,
+      "ma50": 764.55,
+      "vix": 19.5,
+      "ret_5d": -0.59,
+      "ret_21d": -3.62,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
         "above_ma20": false,
         "above_ma50": false,
-        "mom5_pos": true,
+        "mom5_pos": false,
         "mom21_pos": false,
         "vix_cooling": true,
         "vix_spike": false
@@ -121,11 +121,11 @@
           {
             "year": 2026,
             "strategy": 7.0,
-            "benchmark": 11.2,
-            "alpha": -4.3
+            "benchmark": 10.8,
+            "alpha": -3.8
           }
         ],
-        "cum_alpha": -55.5,
+        "cum_alpha": -55.3,
         "cagr": 8.5,
         "bench_cagr": 13.9,
         "mdd": -13.1,
@@ -234,11 +234,11 @@
           {
             "year": 2026,
             "strategy": 10.1,
-            "benchmark": 11.2,
-            "alpha": -1.2
+            "benchmark": 10.8,
+            "alpha": -0.8
           }
         ],
-        "cum_alpha": -64.5,
+        "cum_alpha": -64.4,
         "cagr": 7.1,
         "bench_cagr": 13.9,
         "mdd": -20.5,
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-11-09",
-      "price": 679.35,
-      "ma20": 704.3,
-      "ma50": 720.02,
-      "vix": 19.9,
-      "ret_5d": -0.26,
-      "ret_21d": -9.57,
+      "date": "2026-11-10",
+      "price": 674.76,
+      "ma20": 700.86,
+      "ma50": 719.2,
+      "vix": 19.5,
+      "ret_5d": -1.54,
+      "ret_21d": -9.55,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
@@ -367,17 +367,17 @@
           {
             "year": 2026,
             "strategy": 15.7,
-            "benchmark": 11.0,
-            "alpha": 4.7
+            "benchmark": 10.2,
+            "alpha": 5.5
           }
         ],
-        "cum_alpha": -78.9,
+        "cum_alpha": -78.7,
         "cagr": 7.9,
         "bench_cagr": 18.3,
         "mdd": -29.6,
         "bench_mdd": -35.1,
         "sharpe": 0.76,
-        "invested_pct": 50.1
+        "invested_pct": 50.0
       },
       "backtest_slow": {
         "annual": [
@@ -480,11 +480,11 @@
           {
             "year": 2026,
             "strategy": 12.8,
-            "benchmark": 11.0,
-            "alpha": 1.8
+            "benchmark": 10.2,
+            "alpha": 2.5
           }
         ],
-        "cum_alpha": -76.0,
+        "cum_alpha": -75.8,
         "cagr": 8.7,
         "bench_cagr": 18.3,
         "mdd": -21.3,
@@ -495,13 +495,13 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-11-09",
-      "price": 523.33,
-      "ma20": 521.11,
-      "ma50": 519.57,
-      "vix": 19.9,
-      "ret_5d": 0.77,
-      "ret_21d": 1.42,
+      "date": "2026-11-10",
+      "price": 521.73,
+      "ma20": 521.39,
+      "ma50": 519.4,
+      "vix": 19.5,
+      "ret_5d": 0.9,
+      "ret_21d": 0.76,
       "signal_fast": 1,
       "signal_slow": 0,
       "conditions": {
@@ -612,8 +612,8 @@
           },
           {
             "year": 2026,
-            "strategy": 3.8,
-            "benchmark": 10.1,
+            "strategy": 3.5,
+            "benchmark": 9.8,
             "alpha": -6.3
           }
         ],
@@ -726,17 +726,17 @@
           {
             "year": 2026,
             "strategy": 6.7,
-            "benchmark": 10.1,
-            "alpha": -3.5
+            "benchmark": 9.8,
+            "alpha": -3.1
           }
         ],
-        "cum_alpha": -68.1,
+        "cum_alpha": -68.0,
         "cagr": 4.9,
         "bench_cagr": 12.3,
         "mdd": -18.5,
         "bench_mdd": -36.7,
         "sharpe": 0.57,
-        "invested_pct": 61.4
+        "invested_pct": 61.3
       }
     }
   }
