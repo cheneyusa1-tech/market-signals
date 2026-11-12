@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-11-11 02:03 UTC",
+  "updated_at": "2026-11-12 03:13 UTC",
   "indices": {
     "SPY": {
       "name": "标普500 S&P 500",
-      "date": "2026-11-10",
-      "price": 749.92,
-      "ma20": 760.69,
+      "date": "2026-11-11",
+      "price": 759.81,
+      "ma20": 760.2,
       "ma50": 764.55,
-      "vix": 19.5,
-      "ret_5d": -0.59,
-      "ret_21d": -3.62,
+      "vix": 17.5,
+      "ret_5d": -0.91,
+      "ret_21d": -2.34,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
@@ -121,13 +121,13 @@
           {
             "year": 2026,
             "strategy": 7.0,
-            "benchmark": 10.8,
-            "alpha": -3.8
+            "benchmark": 12.3,
+            "alpha": -5.3
           }
         ],
-        "cum_alpha": -55.3,
+        "cum_alpha": -55.9,
         "cagr": 8.5,
-        "bench_cagr": 13.9,
+        "bench_cagr": 14.0,
         "mdd": -13.1,
         "bench_mdd": -33.7,
         "sharpe": 0.98,
@@ -234,13 +234,13 @@
           {
             "year": 2026,
             "strategy": 10.1,
-            "benchmark": 10.8,
-            "alpha": -0.8
+            "benchmark": 12.3,
+            "alpha": -2.2
           }
         ],
-        "cum_alpha": -64.4,
+        "cum_alpha": -64.9,
         "cagr": 7.1,
-        "bench_cagr": 13.9,
+        "bench_cagr": 14.0,
         "mdd": -20.5,
         "bench_mdd": -33.7,
         "sharpe": 0.76,
@@ -249,13 +249,13 @@
     },
     "QQQ": {
       "name": "纳斯达克 Nasdaq 100",
-      "date": "2026-11-10",
-      "price": 674.76,
-      "ma20": 700.86,
-      "ma50": 719.2,
-      "vix": 19.5,
-      "ret_5d": -1.54,
-      "ret_21d": -9.55,
+      "date": "2026-11-11",
+      "price": 690.38,
+      "ma20": 698.94,
+      "ma50": 718.87,
+      "vix": 17.5,
+      "ret_5d": -0.23,
+      "ret_21d": -7.15,
       "signal_fast": 0,
       "signal_slow": 0,
       "conditions": {
@@ -367,13 +367,13 @@
           {
             "year": 2026,
             "strategy": 15.7,
-            "benchmark": 10.2,
-            "alpha": 5.5
+            "benchmark": 12.8,
+            "alpha": 2.9
           }
         ],
-        "cum_alpha": -78.7,
+        "cum_alpha": -79.2,
         "cagr": 7.9,
-        "bench_cagr": 18.3,
+        "bench_cagr": 18.4,
         "mdd": -29.6,
         "bench_mdd": -35.1,
         "sharpe": 0.76,
@@ -480,13 +480,13 @@
           {
             "year": 2026,
             "strategy": 12.8,
-            "benchmark": 10.2,
-            "alpha": 2.5
+            "benchmark": 12.8,
+            "alpha": -0.0
           }
         ],
-        "cum_alpha": -75.8,
+        "cum_alpha": -76.4,
         "cagr": 8.7,
-        "bench_cagr": 18.3,
+        "bench_cagr": 18.4,
         "mdd": -21.3,
         "bench_mdd": -35.1,
         "sharpe": 0.76,
@@ -495,19 +495,19 @@
     },
     "DIA": {
       "name": "道琼斯 Dow Jones",
-      "date": "2026-11-10",
-      "price": 521.73,
-      "ma20": 521.39,
-      "ma50": 519.4,
-      "vix": 19.5,
-      "ret_5d": 0.9,
-      "ret_21d": 0.76,
+      "date": "2026-11-11",
+      "price": 524.44,
+      "ma20": 521.83,
+      "ma50": 519.36,
+      "vix": 17.5,
+      "ret_5d": -1.63,
+      "ret_21d": 1.62,
       "signal_fast": 1,
       "signal_slow": 0,
       "conditions": {
         "above_ma20": true,
         "above_ma50": true,
-        "mom5_pos": true,
+        "mom5_pos": false,
         "mom21_pos": true,
         "vix_cooling": true,
         "vix_spike": false
@@ -612,8 +612,8 @@
           },
           {
             "year": 2026,
-            "strategy": 3.5,
-            "benchmark": 9.8,
+            "strategy": 4.0,
+            "benchmark": 10.3,
             "alpha": -6.3
           }
         ],
@@ -726,11 +726,11 @@
           {
             "year": 2026,
             "strategy": 6.7,
-            "benchmark": 9.8,
-            "alpha": -3.1
+            "benchmark": 10.3,
+            "alpha": -3.7
           }
         ],
-        "cum_alpha": -68.0,
+        "cum_alpha": -68.2,
         "cagr": 4.9,
         "bench_cagr": 12.3,
         "mdd": -18.5,
